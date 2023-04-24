@@ -14,10 +14,10 @@ const createNewTaskElement = function (taskString) {
 
   listItem.className = 'task__item';
   label.innerText = taskString;
-  label.className = 'task__label';
+  label.className = 'task__label task__label--item';
   checkBox.className = 'task__checkbox'
   checkBox.type = 'checkbox';
-  editInput.className = 'task__text task__text--outline';
+  editInput.className = 'task__text task__text--item';
   editInput.type = 'text';
 
   editButton.innerText = 'Edit';
@@ -26,6 +26,7 @@ const createNewTaskElement = function (taskString) {
   deleteButton.className = 'task__del-btn btn';
   deleteButton.type = 'button';
   deleteButtonImg.src = './assets/icons/remove.svg';
+  deleteButtonImg.className = 'task__icon';
   deleteButtonImg.width = '30';
   deleteButtonImg.height = '30';
   deleteButtonImg.alt = 'icon of delete with cross inside';
