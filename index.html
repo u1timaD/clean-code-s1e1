@@ -1,19 +1,66 @@
-<html>
-<HEAD><title>Todo App</title>
-<link href='https://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'>
-<link rel="stylesheet" href="style.css" type="text/css" MEDIA="screen" charset="utf-8">
-</HEAD>
-<body>
-<div class="aaa"><img src="./eisenhower-matrix.jpg"><a class='more_inf' href="https://goal-life.com/page/method/matrix-eisenhower">Want more details&quest;</a></div>
-<div class="centered-main-page-element"><p id='topSectionForAddingElementToList'><label for="new-task">Add Item</label><div class="task-row-wrapper"><input id='new-task'class="task" type="text"><button>Add</button></div>
-</p><h3>Todo</h3>
-<ul id='incompleteTasks'>
-<li><input type='checkbox'><label class="task">Pay Bills</label><input type="text" class="task"><button class="edit">Edit</button><button class="delete"><img src="./remove.svg"></button></li>
-<li class="editMode"><input type="checkbox"><label class="task">Go Shopping</label><input type="text" value="Go Shopping" class="task"><button class='edit'>Save</button><button class="delete"><img src="./remove.svg"></button></li>
-</ul><h3>Completed</h3><ul id="completed-tasks"><li><input type="checkbox" checked><label class="task">See the Doctor</label><input type="text" class="task"><button class="edit">Edit</button><button class="delete"><img src="./remove.svg"></button>
-</li>
-</ul>
-</div>
-<script type="text/javascript" SRC="app.js"></script>
-</body>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Todo App</title>
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet">
+    <link rel="preload" href="../clean-code-s1e1/assets/fonts/papyrus.woff" as="font">
+    <link rel="preload" href="../clean-code-s1e1/assets/fonts/papyrus.woff2" as="font">
+    <link rel="stylesheet" href="style.css" media="screen">
+  </head>
+  <body class="body">
+    <main>
+      <section class="intro">
+        <h1 class="intro__title">The Eisenhower matrix</h1>
+        <div class="intro__container">
+          <img class="intro__img" src="../clean-code-s1e1/assets/img/eisenhower-matrix.jpg" width="500" height="250" alt="matrix of eisenhower with plan how it do">
+          <a class="intro__link" href="https://goal-life.com/page/method/matrix-eisenhower">Want more details?</a>
+        </div>
+      </section>
+      <section class="task-board">
+        <h2 class="task-board__title">Board for tasks</h2>
+        <div class="task-board__container task">
+          <label class="task__title" for="new-task">add item</label>
+          <div class="task__box">
+            <input id="new-task" class="task__text task__add" type="text" data-task-input="new-task">
+            <button class="btn" type="button">Add</button>
+          </div>
+          <h3 class="task__title">todo</h3>
+          <ul class="task__list todo" data-task-list="todo">
+            <li class="task__item">
+              <input class="task__checkbox" type="checkbox" data-task-input="checkbox">
+              <label class="task__label task__label--item">Pay Bills</label>
+              <input class="task__text task__text--item" type="text">
+              <button class="task__edit-btn btn" type="button">Edit</button>
+              <button class="task__del-btn btn" type="button">
+                <img class="task__icon" src="../clean-code-s1e1/assets/icons/remove.svg" width="30" height="30" alt="icon of delete with cross inside">
+              </button>
+            </li>
+            <li class="task__item task__item--edit">
+              <input class="task__checkbox" type="checkbox" data-task-input="checkbox">
+              <label class="task__label task__label--item">Go Shopping</label>
+              <input class="task__text task__text--item" type="text" value="Go Shopping">
+              <button class="task__edit-btn btn" type="button">Save</button>
+              <button class="task__del-btn btn" type="button">
+                <img class="task__icon" src="../clean-code-s1e1/assets/icons/remove.svg" width="30" height="30" alt="icon of delete with cross inside">
+              </button>
+            </li>
+          </ul>
+          <h3 class="task__title">completed</h3>
+          <ul class="task__list completed" data-task-list="completed">
+            <li class="task__item">
+              <input class="task__checkbox" type="checkbox" data-task-input="checkbox" checked>
+              <label class="task__label task__label--item">See the Doctor</label>
+              <input class="task__text task__text--item" type="text">
+              <button class="task__edit-btn btn" type="button">Edit</button>
+              <button class="task__del-btn btn" type="button">
+                <img class="task__icon" src="../clean-code-s1e1/assets/icons/remove.svg" width="30" height="30" alt="icon of delete with cross inside">
+              </button>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </main>
+    <script src="app.js"></script>
+  </body>
 </html>
