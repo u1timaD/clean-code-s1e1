@@ -17,6 +17,7 @@ const createNewTaskElement = function (taskString) {
   label.className = 'task__label task__label--item';
   checkBox.className = 'task__checkbox'
   checkBox.type = 'checkbox';
+  checkBox.dataset.taskInput = 'checkbox';
   editInput.className = 'task__text task__text--item';
   editInput.type = 'text';
 
@@ -25,7 +26,7 @@ const createNewTaskElement = function (taskString) {
   editButton.type = 'button';
   deleteButton.className = 'task__del-btn btn';
   deleteButton.type = 'button';
-  deleteButtonImg.src = './assets/icons/remove.svg';
+  deleteButtonImg.src = '../clean-code-s1e1/assets/icons/remove.svg';
   deleteButtonImg.className = 'task__icon';
   deleteButtonImg.width = '30';
   deleteButtonImg.height = '30';
@@ -87,9 +88,9 @@ addButton.onclick = addTask;
 addButton.addEventListener('click', addTask);
 
 const bindTaskEvents = function (taskListItem, checkBoxEventHandler) {
-  const checkBox = taskListItem.querySelector('input[type=checkbox]');
-  const editButton = taskListItem.querySelector('button.task__edit-btn');
-  const deleteButton = taskListItem.querySelector('button.task__del-btn');
+  const checkBox = taskListItem.querySelector('[data-task-input="checkbox"]');
+  const editButton = taskListItem.querySelector('.task__edit-btn');
+  const deleteButton = taskListItem.querySelector('.task__del-btn');
 
   editButton.onclick = editTask;
   deleteButton.onclick = deleteTask;
