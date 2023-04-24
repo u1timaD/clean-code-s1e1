@@ -13,7 +13,7 @@
   background-color: #f8f8f8;
   color: #333;
   font-family: "Lato", Arial, sans-serif;
-  font-weight: 400;
+  font-weight: 700;
   font-size: 15px;
 }
 
@@ -77,6 +77,7 @@
   cursor: pointer;
   outline: none;
   vertical-align: middle;
+  font-weight: 700;
 }
 
 .btn:hover {
@@ -111,6 +112,7 @@
   font-family: "Lato", Arial, sans-serif;
   color: #888;
   outline: none;
+  font-weight: 700git;
 }
 
 .task__text:focus {
